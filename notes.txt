@@ -1,0 +1,15 @@
+I.
+
+generated ssl certificate to folder /etc/nginx/certificate (linked to ./certificate)
+modified nginx config to https and ports in compose.yaml
+
+ssl certificate:
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+-keyout /path/to/nginx/certs/selfsigned.key \
+-out /path/to/nginx/certs/selfsigned.crt
+
+
+TODO.
+
+2 volumes
+1 network
