@@ -9,7 +9,24 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 -out /path/to/nginx/certs/selfsigned.crt
 
 
-TODO.
+II. 
 
-2 volumes
-1 network
+2 volumes (in /home/login/data)
+
+in wordpress:
+volumes:
+      - wordpress_data:/var/www/html
+and in nginx:
+volumes:
+	- wordpress_data:/usr/share/nginx/html
+
+# TODO
+1 network - considered to ignore it for now - only work with an older mysql version for whatever reason
+
+
+TODO.
+dockerfiles
+wordpress usernames
+domain name
+.env for environment vars
+docker secrets
