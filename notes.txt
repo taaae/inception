@@ -23,9 +23,11 @@ volumes:
 # TODO
 1 network - considered to ignore it for now - only work with an older mysql version for whatever reason
 
+III.
+
+dockerfiles - create 3 dockerfiles with one line FROM
 
 TODO.
-dockerfiles
 wordpress usernames
 domain name
 .env for environment vars
