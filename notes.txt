@@ -20,15 +20,36 @@ and in nginx:
 volumes:
 	- wordpress_data:/usr/share/nginx/html
 
-# TODO
-1 network - considered to ignore it for now - only work with an older mysql version for whatever reason
-
 III.
 
 dockerfiles - create 3 dockerfiles with one line FROM
 
+Connecting to mariadb:
+inside docker container:
+# mariadb -u USER -p
+if port 3306 is exposed:
+# mysql -h localhost -P 3306 --protocol=tcp -u root -p
+
+Steps for the info:
+# SHOW DATABASES;
+# USE exampledb;
+# SHOW TABLES;
+# [wordpress needs to be set up]
+
+wordpress usernames - with env variables in compose.yaml
+
+
+
 TODO.
-wordpress usernames
 domain name
 .env for environment vars
 docker secrets
+VM
+volumes in /home/login/data of the host machine
+
+Read about PID 1 and the best practices for writing Dockerfiles.
+
+
+LATER.
+1 network - considered to ignore it for now - only work with an older mysql version for whatever reason
+[A docker-network that establishes the connection between your containers.]
