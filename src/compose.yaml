@@ -22,6 +22,8 @@ services:
     env_file: .env
     volumes:
       - wordpress_data:/var/www/html
+    secrets:
+      - mariadb-password
     depends_on:
       - mariadb
     networks:
@@ -35,6 +37,9 @@ services:
     env_file: .env
     volumes:
       - db_data:/var/lib/mysql
+    secrets:
+      - mariadb-root
+      - mariadb-password
     networks:
       - backend
 
@@ -45,3 +50,9 @@ volumes:
 networks:
   frontend:
   backend:
+
+secrets:
+  mariadb-root:
+    file: ../secrets/mariadb-root.txt
+  mariadb-password:
+    file: ../secrets/mariadb-password.txt

@@ -39,8 +39,9 @@ Steps for the info:
 wordpress usernames - with env variables in compose.yaml
 
 * domain name
-# TODO In VM.
+# TODO In VM. 
 echo "127.0.0.1 trusanov.42.fr" | sudo tee -a /etc/hosts
+maybe add makefile rule for that
 
 in nginx.conf server_name  ${DOMAIN_NAME}; (and add environemnt variable for docker)
 
@@ -48,8 +49,15 @@ in nginx.conf server_name  ${DOMAIN_NAME}; (and add environemnt variable for doc
 * .env for environment vars
 add env_file in all 3 services of docker compose and create .env file in src
 
+* docker secrets
+secrets in compose.yaml
+WORDPRESS_DB_PASSWORD_FILE, MARIADB_ROOT_PASSWORD_FILE, MARIADB_PASSWORD_FILE in .env
+
 TODO.
-docker secrets
+certificates in secrets
+generate docker secret randomly with openssl rand (https://docs.docker.com/engine/swarm/secrets/)
+make nginx config / certificates read only?
+use not root password in wordpress?
 VM
 volumes in /home/login/data of the host machine
 
