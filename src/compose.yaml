@@ -8,8 +8,11 @@ services:
       - "443:443"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
-      - ./certificate:/etc/nginx/certificate
+      # - ./certificate:/etc/nginx/certificate
       - wordpress_data:/usr/share/nginx/html
+    secrets:
+      - nginx-ssl-certificate
+      - nginx-ssl-key
     depends_on:
       - wordpress
     networks:
@@ -56,3 +59,7 @@ secrets:
     file: ../secrets/mariadb-root.txt
   mariadb-password:
     file: ../secrets/mariadb-password.txt
+  nginx-ssl-certificate:
+    file: ../secrets/nginx-ssl.crt
+  nginx-ssl-key:
+    file: ../secrets/nginx-ssl.key

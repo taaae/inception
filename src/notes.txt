@@ -52,9 +52,9 @@ add env_file in all 3 services of docker compose and create .env file in src
 * docker secrets
 secrets in compose.yaml
 WORDPRESS_DB_PASSWORD_FILE, MARIADB_ROOT_PASSWORD_FILE, MARIADB_PASSWORD_FILE in .env
+certificates in secrets - moved crt, key in secrets, changed path in nginx, added secrets to compose
 
 TODO.
-certificates in secrets
 generate docker secret randomly with openssl rand (https://docs.docker.com/engine/swarm/secrets/)
 make nginx config / certificates read only?
 use not root password in wordpress?
