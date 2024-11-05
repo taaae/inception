@@ -57,7 +57,6 @@ certificates in secrets - moved crt, key in secrets, changed path in nginx, adde
 moved nginx.conf to nginx folder, made volume readonly
 
 TODO.
-use not root password in wordpress?
 VM
 volumes in /home/login/data of the host machine
 
