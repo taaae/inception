@@ -38,10 +38,13 @@ Steps for the info:
 
 wordpress usernames - with env variables in compose.yaml
 
+In VM.
+# TODO
+* domain name
+echo "127.0.0.1 trusanov.42.fr" | sudo tee -a /etc/hosts
 
 
 TODO.
-domain name
 .env for environment vars
 docker secrets
 VM
