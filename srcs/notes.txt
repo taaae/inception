@@ -66,6 +66,8 @@ Read about PID 1 and the best practices for writing Dockerfiles.
 LATER.
 1 network - considered to ignore it for now - only work with an older mysql version for whatever reason
 [A docker-network that establishes the connection between your containers.]
+generate all docker secrets randomly with openssl rand (https://docs.docker.com/engine/swarm/secrets/)
 
 OPTIONAL.
-generate docker secret randomly with openssl rand (https://docs.docker.com/engine/swarm/secrets/)
+[In your WordPress database, there must be two users, one of them being the administrator] - maybe need to add third user idk
+split env in 3 different files for each container
