@@ -3,8 +3,7 @@ services:
     build: ./nginx
     container_name: nginx
     restart: always
-    environment:
-      - DOMAIN_NAME=trusanov.42.fr
+    env_file: .env
     ports:
       - "443:443"
     volumes:
@@ -20,11 +19,7 @@ services:
     build: ./wordpress
     container_name: wordpress
     restart: always
-    environment:
-      WORDPRESS_DB_HOST: mariadb:3306
-      WORDPRESS_DB_USER: exampleuser
-      WORDPRESS_DB_PASSWORD: examplepass
-      WORDPRESS_DB_NAME: exampledb
+    env_file: .env
     volumes:
       - wordpress_data:/var/www/html
     depends_on:
@@ -37,11 +32,7 @@ services:
     build: ./mariadb
     container_name: mariadb
     restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: exampledb
-      MYSQL_USER: exampleuser
-      MYSQL_PASSWORD: examplepass
+    env_file: .env
     volumes:
       - db_data:/var/lib/mysql
     networks:
