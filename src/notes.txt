@@ -54,9 +54,9 @@ secrets in compose.yaml
 WORDPRESS_DB_PASSWORD_FILE, MARIADB_ROOT_PASSWORD_FILE, MARIADB_PASSWORD_FILE in .env
 certificates in secrets - moved crt, key in secrets, changed path in nginx, added secrets to compose
 
+moved nginx.conf to nginx folder, made volume readonly
+
 TODO.
-generate docker secret randomly with openssl rand (https://docs.docker.com/engine/swarm/secrets/)
-make nginx config / certificates read only?
 use not root password in wordpress?
 VM
 volumes in /home/login/data of the host machine
@@ -67,3 +67,6 @@ Read about PID 1 and the best practices for writing Dockerfiles.
 LATER.
 1 network - considered to ignore it for now - only work with an older mysql version for whatever reason
 [A docker-network that establishes the connection between your containers.]
+
+OPTIONAL.
+generate docker secret randomly with openssl rand (https://docs.docker.com/engine/swarm/secrets/)
