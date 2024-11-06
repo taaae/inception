@@ -62,6 +62,11 @@ volumes in /home/login/data of the host machine
 
 Read about PID 1 and the best practices for writing Dockerfiles.
 
+https://cloud.theodo.com/en/blog/docker-processes-container
+https://www.docker.com/blog/docker-best-practices-choosing-between-run-cmd-and-entrypoint/#:~:text=In%20the%20context%20of%20Unix,every%20process%20in%20the%20system.
+
+learn how exactly docker image looks like, what are those 'layers' and how actually RUN works
+whats "-g daemon off"?
 
 LATER.
 1 network - considered to ignore it for now - only work with an older mysql version for whatever reason
