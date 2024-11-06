@@ -57,6 +57,16 @@ certificates in secrets - moved crt, key in secrets, changed path in nginx, adde
 moved nginx.conf to nginx folder, made volume readonly
 
 TODO.
+nginx logs
+
+LATER.
+more dockerfile practices
+nginx version
+nginx user
+nginx stopsignal
+nginx expose
+nginx entrypoint
+
 VM
 volumes in /home/login/data of the host machine
 
