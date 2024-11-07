@@ -66,6 +66,9 @@ nginx user
 nginx stopsignal
 nginx expose
 nginx entrypoint
+expose ports for informational purposes
+
+ctrl+c mariadb stop
 
 VM
 volumes in /home/login/data of the host machine
@@ -79,6 +82,7 @@ learn how exactly docker image looks like, what are those 'layers' and how actua
 whats "-g daemon off"?
 
 LATER.
+.dockerignore
 1 network - considered to ignore it for now - only work with an older mysql version for whatever reason
 [A docker-network that establishes the connection between your containers.]
 generate all docker secrets randomly with openssl rand (https://docs.docker.com/engine/swarm/secrets/)
