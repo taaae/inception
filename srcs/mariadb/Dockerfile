@@ -12,4 +12,3 @@ EXPOSE 3306
 
 ENTRYPOINT [ "/init-db.sh" ]
 CMD ["mariadbd", "--user=root"]
-# FROM mariadb
