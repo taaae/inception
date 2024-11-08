@@ -81,6 +81,10 @@ https://www.docker.com/blog/docker-best-practices-choosing-between-run-cmd-and-e
 learn how exactly docker image looks like, what are those 'layers' and how actually RUN works
 whats "-g daemon off"?
 
+FIX.
+Nginx is not a reverse proxy, it should ectually use files
+Restart with mariadb doesn't work for some reason (fails to authenticate from wordpress)
+
 LATER.
 .dockerignore
 1 network - considered to ignore it for now - only work with an older mysql version for whatever reason

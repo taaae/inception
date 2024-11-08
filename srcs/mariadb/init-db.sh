@@ -17,7 +17,6 @@ cat << EOF >> /etc/mysql/my.cnf
 bind-address = 0.0.0.0
 EOF
 
-
 mysqladmin -u root -p"$(cat $MARIADB_ROOT_PASSWORD_FILE)" shutdown
 
 exec "$@"
