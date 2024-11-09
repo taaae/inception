@@ -40,7 +40,7 @@ services:
     restart: always
     env_file: .env
     volumes:
-      - /home/vboxuser/data/db_data:/var/lib/mysql
+      - db_data:/var/lib/mysql
     secrets:
       - mariadb-root
       - mariadb-password
@@ -50,6 +50,9 @@ services:
 networks:
   frontend:
   backend:
+
+volumes:
+  db_data:
 
 secrets:
   mariadb-root:
