@@ -53,7 +53,17 @@ networks:
 
 volumes:
   db_data:
+    driver: local
+    driver_opts:
+      type: none
+      device: "/Users/tae/Desktop/volumes/db_data"
+      o: bind
   wordpress_data:
+    driver: local
+    driver_opts:
+      type: none
+      device: "/Users/tae/Desktop/volumes/wordpress_data"
+      o: bind
 
 secrets:
   mariadb-root:
