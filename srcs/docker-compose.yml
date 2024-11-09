@@ -8,7 +8,7 @@ services:
       - "443:443"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-      - wordpress_data:/usr/share/nginx/html
+      - /home/vboxuser/data/wordpress_data:/usr/share/nginx/html
     secrets:
       - nginx-ssl-certificate
       - nginx-ssl-key
@@ -23,7 +23,7 @@ services:
     restart: always
     env_file: .env
     volumes:
-      - wordpress_data:/var/www/html
+      - /home/vboxuser/data/wordpress_data:/var/www/html
     secrets:
       - mariadb-password
       - wordpress-admin-password
@@ -40,16 +40,12 @@ services:
     restart: always
     env_file: .env
     volumes:
-      - db_data:/var/lib/mysql
+      - /home/vboxuser/data/db_data:/var/lib/mysql
     secrets:
       - mariadb-root
       - mariadb-password
     networks:
       - backend
-
-volumes:
-  db_data:
-  wordpress_data:
 
 networks:
   frontend:
