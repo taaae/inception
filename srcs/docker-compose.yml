@@ -56,13 +56,13 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: "/Users/tae/Desktop/volumes/db_data"
+      device: "/home/vboxuser/data/db_data"
       o: bind
   wordpress_data:
     driver: local
     driver_opts:
       type: none
-      device: "/Users/tae/Desktop/volumes/wordpress_data"
+      device: "/home/vboxuser/data/wordpress_data"
       o: bind
 
 secrets:
