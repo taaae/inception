@@ -26,6 +26,7 @@ services:
       - wordpress_data:/var/www/html
     secrets:
       - mariadb-password
+      - wordpress-admin-password
     depends_on:
       - mariadb
     networks:
@@ -62,3 +63,5 @@ secrets:
     file: ../secrets/nginx-ssl.crt
   nginx-ssl-key:
     file: ../secrets/nginx-ssl.key
+  wordpress-admin-password:
+    file: ../secrets/wordpress-admin-password.txt
