@@ -27,6 +27,7 @@ services:
     secrets:
       - mariadb-password
       - wordpress-admin-password
+      - wordpress-user-password
     depends_on:
       - mariadb
     networks:
@@ -65,3 +66,5 @@ secrets:
     file: ../secrets/nginx-ssl.key
   wordpress-admin-password:
     file: ../secrets/wordpress-admin-password.txt
+  wordpress-user-password:
+    file: ../secrets/wordpress-user-password.txt
