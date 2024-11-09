@@ -56,41 +56,5 @@ certificates in secrets - moved crt, key in secrets, changed path in nginx, adde
 
 moved nginx.conf to nginx folder, made volume readonly
 
-TODO.
-nginx logs
-
-LATER.
-more dockerfile practices
-nginx version
-nginx user
-nginx stopsignal
-nginx expose
-nginx entrypoint
-expose ports for informational purposes
-
-ctrl+c mariadb stop
-
 VM
 volumes in /home/login/data of the host machine
-
-Read about PID 1 and the best practices for writing Dockerfiles.
-
-https://cloud.theodo.com/en/blog/docker-processes-container
-https://www.docker.com/blog/docker-best-practices-choosing-between-run-cmd-and-entrypoint/#:~:text=In%20the%20context%20of%20Unix,every%20process%20in%20the%20system.
-
-learn how exactly docker image looks like, what are those 'layers' and how actually RUN works
-whats "-g daemon off"?
-
-FIX.
-Nginx is not a reverse proxy, it should ectually use files
-Restart with mariadb doesn't work for some reason (fails to authenticate from wordpress)
-
-LATER.
-.dockerignore
-1 network - considered to ignore it for now - only work with an older mysql version for whatever reason
-[A docker-network that establishes the connection between your containers.]
-generate all docker secrets randomly with openssl rand (https://docs.docker.com/engine/swarm/secrets/)
-
-OPTIONAL.
-[In your WordPress database, there must be two users, one of them being the administrator] - maybe need to add third user idk
-split env in 3 different files for each container

@@ -9,4 +9,5 @@ COPY ./init-db.sh /init-db.sh
 EXPOSE 3306
 
 ENTRYPOINT [ "/init-db.sh" ]
+
 CMD ["mariadbd", "--user=root"]
