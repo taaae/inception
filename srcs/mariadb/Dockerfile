@@ -6,8 +6,6 @@ RUN apt update \
 
 COPY ./init-db.sh /init-db.sh
 
-RUN chmod +x /init-db.sh
-
 EXPOSE 3306
 
 ENTRYPOINT [ "/init-db.sh" ]
