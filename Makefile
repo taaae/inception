@@ -10,6 +10,7 @@ fclean:
 	(cd $(COMPOSE_DIR) && docker compose down -v)
 
 gen_secrets:
+	@mkdir -p secrets
 	@openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 	-keyout ./secrets/nginx-ssl.key \
 	-out ./secrets/nginx-ssl.crt \
